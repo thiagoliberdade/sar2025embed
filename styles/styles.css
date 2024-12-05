@@ -1,0 +1,507 @@
+/* Load assets */
+
+/* Reset css @import from file in css folder */
+@import url("reset.css");
+
+/* Webfonts: include webfonts here using @font-face */
+@font-face {
+  font-family: "Sar";
+  src: url("../fonts/league-spartan-sar.ttf") format("truetype-variations");
+  /* Add more src declarations for other font formats if needed */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Alegreya-Italic";
+  src: url("../fonts/alegreya-italic.ttf") format("truetype-variations");
+  /* Add more src declarations for other font formats if needed */
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Universal selectors */
+
+:root {
+  --main-color: black;
+  --secondary-color: #27AAE1;
+  /* Cyan */
+  --accent-color: #E1B825;
+  /* Mustard Yellow */
+}
+
+/* Mobile First */
+/* Default styles for mobile devices */
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: 'Sar', Arial, Helvetica, sans-serif;
+}
+
+body {
+
+  font-size: 16px;
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(240, 250, 255);
+  box-sizing: border-box;
+
+  /* background: linear-gradient(144deg, #d7e8f1, #c6e9f9, #f3f8fb);
+  background-size: 600% 600%;
+
+  -webkit-animation: bganim 29s ease infinite;
+  -moz-animation: bganim 29s ease infinite;
+  animation: bganim 29s ease infinite; */
+
+}
+
+
+
+@-webkit-keyframes bganim {
+  0% {
+    background-position: 9% 0%
+  }
+
+  50% {
+    background-position: 92% 100%
+  }
+
+  100% {
+    background-position: 9% 0%
+  }
+}
+
+@-moz-keyframes bganim {
+  0% {
+    background-position: 9% 0%
+  }
+
+  50% {
+    background-position: 92% 100%
+  }
+
+  100% {
+    background-position: 9% 0%
+  }
+}
+
+@keyframes bganim {
+  0% {
+    background-position: 9% 0%
+  }
+
+  50% {
+    background-position: 92% 100%
+  }
+
+  100% {
+    background-position: 9% 0%
+  }
+}
+
+header {
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  top: 0;
+  margin: 0;
+  padding: 2rem 1rem;
+  width: 100%;
+  height: 2rem;
+
+  z-index: 10;
+
+  /* background-color: var(--secondary-color); */
+}
+
+main {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  /* width: 100%; */
+  min-height: 100vh;
+  /* background-color: aliceblue; */
+
+
+}
+
+#feature {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  max-height: 900px;
+}
+
+#animation {
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 60%;
+  top: 40.5%
+}
+
+#logo {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+
+  /* left: -10%; */
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  /* background-color: yellow; */
+  height: 40%;
+}
+
+#descriptor {
+  position: absolute;
+  top: 10%;
+  left: 2.5%;
+}
+
+#logo figure {
+  position: absolute;
+  display: block;
+  bottom: -10%;
+  left: -10%;
+  content: url(../images/resonance-logo-b-medium.svg);
+  height: 25vh;
+  /* min-height: min(25vh, 50vw); */
+  max-width: 125%;
+}
+
+
+@media only screen and (min-width: 660px) {
+  #logo figure {
+    content: url(../images/resonance-logo-b-large.svg);
+    bottom: -8vh;
+    height: 22vh;
+    /* max-width: 100%; */
+  }
+}
+
+@media only screen and (min-device-width: 960px) and (min-width: 320px) {
+  #logo figure {
+    /* height: 20vh; */
+    bottom: -4vh;
+
+  }
+}
+
+@media only screen and (min-device-width: 960px) and (min-width: 660px) {
+  #logo figure {
+    /* height: 20vh; */
+    bottom: -8vh;
+
+  }
+}
+
+/* Tablet Vertical Orientation */
+@media screen and (min-width: 660px) and (max-width: 959px) {
+  #logo figure {
+    content: url(../images/resonance-logo-b-large.svg);
+    bottom: -6vh;
+    left: -10%;
+    height: 16.5vh;
+
+  }
+
+}
+
+#logo h1 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  left: 40%;
+  width: 60%;
+  font-size: min(5vw, 3rem);
+  text-wrap: wrap;
+  padding-right: 1.5em;
+}
+
+#logo h1 strong {
+  font-variation-settings: 'wght'750;
+}
+
+#logo h2 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  left: 40%;
+  width: 60%;
+  font-size: min(4vw, 2rem);
+  text-wrap: wrap;
+  padding-right: 1.5em;
+}
+
+#logo h2 strong {
+  font-variation-settings: 'wght'800;
+}
+
+/* Make it slightly smaller on the desktop version */
+@media only screen and (min-device-width: 960px) and (min-width: 320px) {
+  #descriptor {
+    top: 10%;
+    left: 6.5%;
+  }
+
+  #logo h1 {
+    font-size: max(2vw, 1.75rem);
+    width: 60%;
+    min-width: 320px;
+
+  }
+
+  #logo h2 {
+    font-size: max(1.75vw, 1.25rem);
+    width: 60%;
+
+  }
+
+
+}
+
+/* Make it slightly smaller on the desktop version */
+@media only screen and (min-device-width: 960px) and (min-width: 960px) {
+  #descriptor {
+    top: 5%;
+    width: 100%;
+    /* left: 20% */
+  }
+
+  #logo h1 {
+    font-size: min(3vw, 2rem);
+    width: 100%;
+    left: 16.5%;
+  }
+
+  #logo h2 {
+    font-size: min(2vw, 1.5rem);
+    width: 80%;
+
+    left: 16.5%;
+  }
+
+
+
+
+}
+
+
+
+
+
+sup {
+  font-size: 75%;
+  /* font-weight: bolder; */
+  vertical-align: super;
+}
+
+
+
+#cta {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+
+  height: 20%;
+  bottom: 0;
+  /* padding-bottom: 10%; */
+  /* background-color: #E1B825; */
+}
+
+#cta-btn-square {
+  position: absolute;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 960px;
+
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  bottom: 0;
+
+  align-self: center;
+  /* bottom: 10%; */
+  height: 7.5rem;
+
+  background-color: var(--accent-color);
+  color: var(--main-color);
+  /* padding-top: 1.75rem; */
+  font-size: 1.5rem;
+  /* border-radius: 0.75rem; */
+  /* border: 1px solid var(--main-color); */
+  font-variation-settings: 'wght'700;
+  text-decoration: none;
+  /* border-bottom: 5px solid black; */
+}
+
+#cta-btn {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  width: 85%;
+  max-width: 960px;
+
+
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  bottom: 0;
+
+  align-self: center;
+  /* bottom: 10%; */
+  height: 7.5rem;
+
+  background-color: var(--accent-color);
+  color: var(--main-color);
+  /* padding-top: 1.75rem; */
+  font-size: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--main-color);
+  font-variation-settings: 'wght'700;
+  text-decoration: none;
+}
+
+#cta-btn:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+#about {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  background-color: var(--secondary-color);
+  width: 100%;
+  max-width: 960px;
+
+  height: 65vh;
+  min-height: 250px;
+  text-wrap: wrap;
+
+  padding: 2rem 7.5%;
+  font-size: 2.25em;
+  line-height: 1.35em;
+  color: white;
+
+  font-family: 'Alegreya-Italic', 'Times New Roman', Times, serif;
+  /* border-top: solid 4px black; */
+}
+
+#about-square {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  background-color: white;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+
+  /* height: 65vh;
+  min-height: 450px; */
+  text-wrap: wrap;
+
+  padding: 2rem 7.5%;
+  font-size: 2.25em;
+  line-height: 1.35em;
+  color: black;
+
+  font-family: 'Alegreya-Italic', 'Times New Roman', Times, serif;
+  border-top: solid 4px black;
+}
+
+@media only screen and (min-width: 660px) {
+  #abour, #about-square {
+    /* height: 35vh;
+    min-height: 250px; */
+  }
+}
+
+:is(#about, #about-square) h2 {
+  font-family: 'Sar', Arial, Helvetica, sans-serif;
+  font-size: 0.35em;
+  font-variation-settings: 'wght'800;
+  text-transform: uppercase;
+}
+
+footer {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  /* width: 100vw; */
+  justify-content: center;
+  min-height: 15vh;
+  background-color: var(--main-color);
+
+}
+
+footer figure {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 2rem 1rem 0rem 1rem;
+
+  width: 30%;
+  min-width: 75px;
+  max-width: 150px;
+  height: 5rem;
+}
+
+footer figure img {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+
+
+}
+
+
+
+/* Mobile Landscape Orientation */
+@media screen and (min-width: 480px) and (orientation: landscape) {
+  /* Styles for landscape orientation on mobile devices */
+}
+
+/* Tablet Vertical Orientation */
+@media screen and (min-width: 768px) {
+  /* Styles for tablets in vertical orientation */
+}
+
+/* Small Desktop and Tablet in Horizontal Orientation */
+@media screen and (min-width: 1024px) {
+  /* Styles for small desktops and tablets in horizontal orientation */
+}
+
+/* Normal Desktop */
+@media screen and (min-width: 1280px) {
+  /* Styles for normal desktops */
+}
+
+/* Large Desktop */
+@media screen and (min-width: 1600px) {
+  /* Styles for large desktops */
+}
